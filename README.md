@@ -1,10 +1,14 @@
+# Port: Lifelines Pilot
+
+This fork will contain code to setup a data donation study for the lifelines pilot.
+
+# Port: A frontend for data donation
+
 <p align="center">
   <a href="https://github.com/eyra/port">
     <img width="40%" height="40%" src="./public/port_logo.svg">
   </a>
 </p>
-
-# Port: A frontend for data donation
 
 Port is a research tool that enables individuals to donate their digital trace data for academic research in a secure, transparent, and privacy-preserving way. 
 
