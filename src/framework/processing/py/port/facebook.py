@@ -150,7 +150,7 @@ def extract_conversation(b: io.BytesIO) -> list[props.PropsUIPromptConsentFormTa
         for m in d["messages"]:
             datapoints.append((
                 m.get("sender_name", None),
-                m.get("content", None),
+                helpers.fix_string_encoding(m.get("content", None)),
                 helpers.epoch_to_iso(m.get("timestamp_ms", None) / 1000)
             ))
         df = pd.DataFrame(datapoints, columns=["Sender", "Content", "Time"])

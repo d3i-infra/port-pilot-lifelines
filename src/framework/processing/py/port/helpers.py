@@ -282,3 +282,20 @@ def create_consent_form_tables(unique_table_id: str, title: props.Translatable, 
             out.append(table)
 
     return out
+
+
+def fix_string_encoding(input: str) -> str:
+    """
+    Fixes the string encoding by attempting to encode it using the 'latin1' encoding and then decoding it.
+
+    Args:
+        input (str): The input string that needs to be fixed.
+
+    Returns:
+        str: The fixed string after encoding and decoding, or the original string if an exception occurs.
+    """
+    try:
+        fixed_string = input.encode("latin1").decode()
+        return fixed_string
+    except Exception:
+        return input
